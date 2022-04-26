@@ -5,14 +5,14 @@ public class Patients {
     private String name;
     private String gender;
     private String ailment;
-    private int IDNumber;
+    private boolean willRecover;
 
     // constructors
-    public Patients(String name, String gender, String ailment, int IDNumber) {
+    public Patients(String name, String gender, String ailment, boolean willRecover) {
         this.name = name;
         this.gender = gender;
         this.ailment = ailment;
-        this.IDNumber = IDNumber;
+        this.willRecover = willRecover;
     }
 
     // getters and setters
@@ -42,13 +42,11 @@ public class Patients {
         this.ailment = ailment;
     }
 
-    public int getIDNumber() {
-        return IDNumber;
+    public boolean isWillRecover() {
+        return willRecover;
     }
 
-    public void setIDNumber(int IDNumber) {
-        this.IDNumber = IDNumber;
+    public void setWillRecover(boolean willRecover) {
+        this.willRecover = willRecover;
     }
-
-
 }

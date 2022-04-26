@@ -1,11 +1,11 @@
-package Staff.Nurses;
+package Staff;
 
 
 import Staff.Staff;
 
 import java.util.ArrayList;
 
-public class Nurses extends Staff {
+public class Nurses extends Staff implements IntroduceSelf, TreatPatients{
 
     // constructor
 
@@ -15,9 +15,22 @@ public class Nurses extends Staff {
         super(name, age, gender, title);
     }
 
+    @Override
+    public String canIHelp() {
+        return ("Do you need any medication?");
+    }
+
     // intro method - body
 
     public String introduce() {
         return ("Hi there, my name is Nurse " + name + " and my role is " + title);
+    }
+
+    public boolean treatPatients(){
+        if (Math.random() == 0){
+            return false;
+        } else return true;
+
+
     }
 }

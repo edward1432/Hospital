@@ -18,10 +18,10 @@ public class Reception extends Department{
         Cardiology cardiology = new Cardiology(true);
 
         if (patient.getAilment() == "Broken leg"){
-            this.aAndE.patientsHere.add(patient);
+            aAndE.addPatients(patient);
             return ("Admitted to A&E");
         } else if (patient.getAilment() == "Heart attack"){
-            cardiology.patientsHere.add(patient);
+            cardiology.addPatients(patient);
             return ("Admitted to Cardiology");
         } else {
             return ("Sorry, we cannot treat your condition!");

@@ -1,9 +1,10 @@
-package Staff.Operational;
+package Staff;
 
 
+import Patients.Patients;
 import Staff.Staff;
 
-public abstract class  CanteenStaff extends Staff {
+public class CanteenStaff extends Staff implements IntroduceSelf{
 
         private String todaySpecial;
 
@@ -20,10 +21,17 @@ public abstract class  CanteenStaff extends Staff {
 
         }
 
-        // intro method - body
+    @Override
+    public String canIHelp() {
+        return ("We have many dishes on offer, please take a look at our menu" );
+    }
+
+    // intro method - body
 
         public String introduce() {
             return ("Hi there, what can I get for you? Today's special is: " + todaySpecial);
         }
 
+
     }
+

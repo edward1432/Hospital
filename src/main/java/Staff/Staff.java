@@ -1,7 +1,5 @@
 package Staff;
 
-import java.util.ArrayList;
-
 public abstract class Staff {
 
     // properties
@@ -10,11 +8,7 @@ public abstract class Staff {
     protected int age;
     protected String gender;
     protected String title;
-    protected ArrayList<Staff> Staff;
 
-    public Staff(ArrayList<Staff> allStaff) {
-        this.Staff = new ArrayList<>();
-    }
 
     // Constructor
 
@@ -43,11 +37,24 @@ public abstract class Staff {
         return title;
     }
 
-
-    // Behaviours/ Methods
-
-    public abstract String introduce();
-
+    public void setName(String name) {
+        this.name = name;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    // Behaviour - can i help you?
+
+    public abstract String canIHelp();
+}
 

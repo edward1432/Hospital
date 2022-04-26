@@ -48,4 +48,6 @@ public abstract class Department {
     public void setPatientsHere(ArrayList<Patients> patientsHere) {
         this.patientsHere = patientsHere;
     }
+
+
 }
